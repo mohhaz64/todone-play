@@ -1,8 +1,8 @@
 package todone
 
-import scala.collection.mutable.StringBuilder
-
 import cats.data.NonEmptyChain
+
+import scala.collection.mutable
 
 /** A little utility to make it easier to compose CSS styles
   */
@@ -17,7 +17,7 @@ final case class Style(style: NonEmptyChain[String]) {
     Style(this.style ++ that.style)
 
   override def toString: String = {
-    val builder = new StringBuilder(128, style.head)
+    val builder = new mutable.StringBuilder(128, style.head)
     style.tail.iterator.foreach { elt =>
       builder ++= " "
       builder ++= elt

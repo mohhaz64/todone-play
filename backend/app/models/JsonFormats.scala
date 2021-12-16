@@ -8,6 +8,8 @@ object JsonFormats {
 
   implicit val projectFormat: Format[Project] = Json.format[Project]
 
+  implicit val projectsFormat: Format[Projects] = Json.format[Projects]
+
   implicit val stateFormat: Format[State] = {
     import State._
 

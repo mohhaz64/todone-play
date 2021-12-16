@@ -2,7 +2,7 @@ package todone
 
 import io.circe._
 import io.circe.syntax._
-import models.{DefaultTasks, JsonFormats}
+import models.JsonFormats
 import munit.FunSuite
 import play.api.libs.json.{Json => PlayJson, _}
 import todone.data._
